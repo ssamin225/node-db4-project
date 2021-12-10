@@ -1,5 +1,5 @@
 
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex, Promise) { // eslint-disable-line
   return knex('steps').insert([
     {
       step_number: 1, 
