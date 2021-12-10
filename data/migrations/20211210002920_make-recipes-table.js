@@ -22,7 +22,6 @@ exports.up = async function(knex) {
     })
     .createTable('step_ingredients', tbl => {
       tbl.increments('step_ingredients_id')
-      tbl.decimal('quantity').notNullable()
       tbl.integer('step_id')
         .unsigned()
         .notNullable()
@@ -35,6 +34,7 @@ exports.up = async function(knex) {
         .references('ingredient_id')
         .inTable('ingredients')
         .onDelete('RESTRICT')
+      tbl.decimal('quantity').notNullable()
     })
   };
 

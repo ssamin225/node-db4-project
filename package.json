@@ -4,7 +4,8 @@
   "scripts": {
     "server": "nodemon index.js",
     "up": "knex migrate:up",
-    "down": "knex migrate:down"
+    "down": "knex migrate:down",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",
